@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "BatailleNavale"
+version = "1.0.0"
+description = "Jeu de bataille navale en console et interface Tkinter"
+authors = [{name = "Équipe BatailleNavale"}]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest", "coverage"]
+
+[tool.pytest.ini_options]
+addopts = "--maxfail=1 --disable-warnings"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["bataille_navale"]
+parallel = true
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true
+skip_covered = true
+output_xml = true
+
+[tool.coverage.xml]
+output = "coverage.xml"
