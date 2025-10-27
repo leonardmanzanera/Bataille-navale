@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+*.bn-save.json
+.pytest_cache/
+coverage.xml
+htmlcov/
